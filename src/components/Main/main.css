@@ -1,0 +1,20 @@
+@import url(//db.onlinewebfonts.com/c/1fed4454352f201d52b65ca5480afb2d?family=Playlist);
+
+.michinombre {
+	font-family: 'Playlist';
+	color: white;
+}
+.principal {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: black;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)),
+		url('https://i.ytimg.com/vi/se1daz9UXJ0/maxresdefault.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
