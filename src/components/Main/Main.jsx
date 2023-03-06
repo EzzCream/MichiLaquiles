@@ -1,12 +1,40 @@
 import './main.css';
 import 'animate.css';
 import { useEffect, useState } from 'react';
-import { getDocument } from '../../service/callFirebase.js';
+import { addDocument, getDocument } from '../../service/callFirebase.js';
 import { Loading } from '../Loading/Loading.jsx';
 
 export const Main = () => {
 	const [fav, setFav] = useState();
 	const [loading, setLoading] = useState(1);
+	const [form, setForm] = useState({
+		nombre: '',
+		correo: '',
+		comentario: '',
+	});
+
+	const setCorreo = (e) => {
+		setForm({
+			...form,
+			correo: e.target.value,
+		});
+	};
+	const setNombre = (e) => {
+		setForm({
+			...form,
+			nombre: e.target.value,
+		});
+	};
+	const setComentario = (e) => {
+		setForm({
+			...form,
+			comentario: e.target.value,
+		});
+	};
+
+	const agregar = () => {
+		addDocument(form);
+	};
 
 	useEffect(() => {
 		const getData = async () => {
@@ -52,7 +80,45 @@ export const Main = () => {
 					></iframe>
 				</div>
 			</div>
-			<div>Oscar Antonio Rodriguez Carmona</div>
+			<div className="contenido">
+				<h2 className="titulo display-3">Contacto</h2>
+				<div className="form">
+					<input
+						className="form-control m-3"
+						type="email"
+						placeholder="Correo"
+						name="correo"
+						value={form.correo}
+						onChange={setCorreo}
+						required
+					></input>
+					<input
+						className="form-control m-3"
+						type="text"
+						placeholder="Nombre"
+						name="nombre"
+						value={form.nombre}
+						onChange={setNombre}
+						required
+					></input>
+					<input
+						className="form-control m-3"
+						type="text"
+						placeholder="Comentario"
+						name="comentario"
+						value={form.comentario}
+						onChange={setComentario}
+						required
+					></input>
+					<button
+						type="button"
+						className="btn btn-dark"
+						onClick={agregar}
+					>
+						Send
+					</button>
+				</div>
+			</div>
 		</div>
 	);
 };
