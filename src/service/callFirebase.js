@@ -11,9 +11,10 @@ import { db } from './firebase.js';
 export const getDocuments = async () => {
 	const docRef = query(collection(db, 'menu'));
 	const a = await getDocs(docRef);
-	a.forEach((doc) => {
-		console.log(doc.data().nombre);
-	});
+	// a.forEach((doc) => {
+	// 	console.log(doc.data().nombre);
+	// });
+	return a;
 };
 
 export const getDocument = async (id) => {
