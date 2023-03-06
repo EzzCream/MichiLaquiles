@@ -47,6 +47,8 @@
 }
 .favImg {
 	width: 500px;
+	margin-top: 40px;
+	border-radius: 10px;
 }
 .mapa {
 	width: 100%;
