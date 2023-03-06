@@ -31,11 +31,11 @@ export const NavBar = () => {
 								Menu
 							</Link>
 						</li>
-						<li className="nav-item">
+						{/* <li className="nav-item">
 							<a className="nav-link" href="#">
 								Reservas
 							</a>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 			</div>
