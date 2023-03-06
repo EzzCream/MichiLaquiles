@@ -24,7 +24,7 @@ export const NavBar = () => {
 					<ul className="navbar-nav">
 						<li className="nav-item">
 							<a
-								className="nav-link active"
+								className="nav-link"
 								aria-current="page"
 								href="#"
 							>
@@ -34,11 +34,6 @@ export const NavBar = () => {
 						<li className="nav-item">
 							<a className="nav-link" href="#">
 								Reservas
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Acerca de nosotros
 							</a>
 						</li>
 					</ul>
